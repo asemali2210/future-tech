@@ -1,0 +1,20 @@
+@import './abstract/color';
+@import './abstract/vars';
+@import './core/rest';
+@import './core/classes';
+@import './core/typograpghy';
+@import './layout/navbar';
+
+html, body{
+    background-color: #262626;
+    color: $grey-1;
+    @media screen and (max-width: 500px) {
+        font-size: 12px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
+    @media screen and (min-width: 1020px) {
+        font-size: 18px;
+    }
+}

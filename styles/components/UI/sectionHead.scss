@@ -1,0 +1,11 @@
+@import '../../abstract/color';
+.section__head{
+    padding: 80px 0;
+    .top__tag{
+        background-color: $grey-4;
+        padding: 7px;
+        border-radius: 5px;
+        color: $white;
+        margin-bottom: 20px;
+    }
+}
