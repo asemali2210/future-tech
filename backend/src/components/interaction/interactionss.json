@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_interaction_interactionsses",
+  "info": {
+    "displayName": "Interactionss",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "likes": {
+      "type": "biginteger"
+    },
+    "shares": {
+      "type": "biginteger"
+    },
+    "comments": {
+      "type": "biginteger"
+    }
+  }
+}

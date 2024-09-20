@@ -1,0 +1,9 @@
+
+export default function FilterButton({tag,btnTag, onFilter}){
+    return(
+        <button className={`col-4 col-md btn__filter__item bg-dark-2 ${tag == `${btnTag}` && `--active`}`}
+            onClick={() => onFilter(`${btnTag}`)} >
+                {btnTag}
+        </button>
+    )
+}

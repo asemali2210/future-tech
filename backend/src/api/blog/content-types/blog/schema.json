@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "blogs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    },
+    "blogId": {
+      "type": "uid",
+      "required": true
+    },
+    "auther": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "type": "enumeration",
+      "enum": [
+        "Quantum Computing",
+        "AI Ethics",
+        "Space Exploration"
+      ],
+      "required": true
+    },
+    "autherImg": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "interaction": {
+      "displayName": "Interactionss",
+      "type": "component",
+      "repeatable": false,
+      "component": "interaction.interactionss"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}
