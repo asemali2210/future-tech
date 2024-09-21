@@ -20,7 +20,6 @@ export default function Blog({blog,id }){
                         <div className="auth__img">
                             <Image src={process.env.NEXT_PUBLIC_STRAPI_URL + blog.autherImg.data.attributes.url} quality={100} alt={blog.auther} width={60} height={60}/>
                         </div>
-                        
                         <div className="auth__data">
                             <h2 className="hd-md c-wh">{blog.auther}</h2>
                             <p className="c-grey-1">{blog.tags}</p>

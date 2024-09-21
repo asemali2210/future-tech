@@ -1,8 +1,8 @@
 import HomeHeader from "@/components/HomeHeader";
-import SectionHead from "@/components/ui/sectionHead";
-import HomeBlogs from "@/layout/home/HomeBlogs";
-import HomeFeatures from "@/layout/home/HomeFeatures";
-import SubHeader from "@/layout/home/SubHeader";
+import HomeBlogs from "@/layout/home/sections/HomeBlogs";
+import HomeFeatures from "@/layout/home/sections/HomeFeatures";
+import SubHeader from "@/layout/home/sections/SubHeader";
+import HomeResources from "@/layout/home/sections/HomeResources";
 
 
 export default async function Home() {
@@ -12,11 +12,8 @@ export default async function Home() {
       <HomeHeader />
       <SubHeader />
       <HomeFeatures />
-      <SectionHead
-        href="/" content="View All Testimonials" link
-        tag="Your Gateway to In-Depth Information" head="Unlock Valuable Knowledge with FutureTech's Resources"
-      />
       <HomeBlogs />
+      <HomeResources />
     </div>
   )
 }

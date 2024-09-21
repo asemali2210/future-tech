@@ -1,5 +1,5 @@
 import Link from "next/link";
-import '@/styles/components/UI/forwrod-btn.scss'
+import '@/styles/components/UI/forwrod-btn.scss';
 import { BsArrowUpRight } from "react-icons/bs";
 
 export default function ForwordLink({href,arrow, radius,content}) {

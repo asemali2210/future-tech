@@ -1,8 +1,6 @@
-import people from '@/public/assests/images/header-people.png';
 import sun from '@/public/assests/images/sun-img.svg';
 import Image from 'next/image';
 import ForwordLink from './buttons/ForwordLink';
-
 
 export default  function HomeHeader() {
   return (

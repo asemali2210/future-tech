@@ -3,14 +3,16 @@
 import SectionHead from "@/components/ui/sectionHead";
 import { useState, useEffect, useCallback } from 'react'
 import useFetchBlogs from "@/hooks/useFetchBlogs";
-import FilterButton from "./ui/FilterButton";
-import Blog from "./ui/Blog";
-import ForwordLink from "@/components/buttons/ForwordLink";
+import FilterButton from "../ui/FilterButton";
+import Blog from "../ui/Blog";
+import { IoReload } from "react-icons/io5"; 
+
 export default  function HomeBlogs() {
 
     const { blogsData, tags, isLoading, error } = useFetchBlogs();
     const [filteredBlogs, setFilteredBlogs] = useState(blogsData);
     const [activeTag, setActiveTag] = useState('All');
+    
 
     useEffect(() => {
         setFilteredBlogs(blogsData);
@@ -34,7 +36,7 @@ export default  function HomeBlogs() {
 
     if (isLoading) {
         return(
-            <div class="card-text placeholder-glow  bg-dark-1">
+            <div className="card-text placeholder-glow  bg-dark-1">
                 <div className="col-12 p-0 br-b">
                     <div className="container">
                         <div className="row">
@@ -42,7 +44,7 @@ export default  function HomeBlogs() {
                                 <div className="col-12 p-0 br-b">
                                     <div className="container">
                                     {Array.from({ length: 3 }).map((_, index) => (
-                                        <div  className="blog__container py-5 ">
+                                        <div  className="blog__container py-5 " key={index}>
                                             <div className="row placeholder-glow ">
                                                 <div className="col-md-3">
                                                     <div className="d-flex align-items-center gap-3">
@@ -59,12 +61,11 @@ export default  function HomeBlogs() {
                                                     <div className="col-4 placeholder rounded"></div>
                                                     <div className="col-6 placeholder rounded"></div>
                                                     <div className="col-10 placeholder rounded"></div>
-                                                </div>
+                                                </div> 
                                                 <div className="col-md-2 align-self-center placeholder rounded" style={{height: '60px'}}>
                                                 </div>
                                             </div>
                                         </div>
-
                                     ))}
                                     </div>
                                 </div>
@@ -76,7 +77,22 @@ export default  function HomeBlogs() {
 
         )
     };
-    if (error) return <p>Error loading blogs.</p>;
+
+
+    if (error){
+        const refreshPage = () => {
+            window.location.reload()
+        }
+        return (
+            <div className="error-blogs bg-dark-1">
+                <div className="container-fluid">
+                    <div className="d-flex justify-content-center align-items-center"  style={{height: '200px'}}>
+                        <button className="error__btn d-block" onClick={refreshPage}><IoReload /> Retry</button>
+                    </div>
+                </div>
+            </div>
+       )
+    }
 
     return (
         <div className="home__blogs bg-dark-1">

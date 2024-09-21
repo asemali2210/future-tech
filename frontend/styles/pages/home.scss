@@ -217,18 +217,29 @@
             }
         }
     }
+    
 }
 
-
-.br-b{
-    border-bottom: 1px solid #262626;
-
+.error-blogs{
+    .error__btn{
+        border: 1px solid $grey-4;
+        color: $primary;
+        border-radius: 10px;
+        padding: 10px 20px;
+        background: none;
+    }
 }
-.br-l{
-    border-left: 1px solid #262626;
 
-}
-.br-r{
-    border-right: 1px solid #262626;
-
+.home__resources{
+    .home__resource__container{
+        .home__resource__right{
+           
+            
+            .__discription{
+                font-size: .9rem;
+            }
+            .__link{
+            }
+        }
+    }
 }
