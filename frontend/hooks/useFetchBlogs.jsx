@@ -6,7 +6,6 @@ export default function useFetchBlogs() {
   const [tags, setTags] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
   useEffect(() => {
       async function fetchBlogs() {
         try {

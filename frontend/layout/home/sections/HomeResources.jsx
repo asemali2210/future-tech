@@ -104,21 +104,21 @@ export default function HomeResources() {
                             <div className ="home__resource__img ">
                               <Image src={whitepapersImg} alt="e-book" className="img-fluid" />
                             </div>
-                            <div className="d-flex align-items-center  justify-content-between column-gap-1">
-                              <div className="col-3 border-dark-4 rounded-4 p-3 bg-dark-2">
-                                <p className="my-2">Total Whitepapers</p>
+                            <div className="d-flex align-items-center  justify-content-between column-gap-2">
+                              <div className="flex flex-fill me-3 border-dark-4 rounded-4 p-3 bg-dark-2">
+                                <p className="mb-2">Total Whitepapers</p>
                                 <p className="c-wh fw-semibold">Over 50 whitepapers</p>
                               </div>
                               <div className="col-8 d-flex align-items-center justify-content-between border-dark-4 rounded-4 p-3 bg-dark-2">
-                                <div>
-                                  <p className="my-2">Download Formats</p>
+                                <div >
+                                  <p className="mb-2">Download Formats</p>
                                   <p className="c-wh fw-semibold">PDF format for access.</p>
                                 </div>
-                                <button className="bg-dark-2 btn border-dark-4 p-3 py-2  c-wh fw-semibold">Preview <IoEyeSharp className="c-main"/></button>
+                                <button className="bg-dark-2 btn border-dark-4 p-3  c-wh fw-semibold">Preview <IoEyeSharp className="c-main"/></button>
                               </div>
                             </div>
                             <div className="col-12 border-dark-4 rounded-4 p-3 bg-dark-2">
-                              <p className="my-2">Average Author Expertise</p>
+                              <p className="mb-2">Average Author Expertise</p>
                               <p className="c-wh fw-semibold">Whitepapers are authored by subject matter experts with an average of 20 years of experience.</p>
                             </div>
                           </div>
