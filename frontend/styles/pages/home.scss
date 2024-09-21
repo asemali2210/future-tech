@@ -243,3 +243,20 @@
         }
     }
 }
+
+
+.home__testimonials{
+    .testimonials__box{
+        .testimonial__body{
+            padding-top: 40px !important;
+            .testimonial__stars{
+                top: -10%;
+                padding: 10px;
+                border-radius: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                column-gap: 7px;
+            }
+        }
+    }
+}

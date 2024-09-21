@@ -122,7 +122,7 @@ export default  function HomeBlogs() {
                 </div>
                 {
                     filteredBlogs.map(blog => (
-                        <div className="col-12 p-0 br-b">
+                        <div className="col-12 p-0 br-b" key={blog.id}>
                             <div className="container">
                                 <div  className="blog__container">
                                     <Blog  blog={blog.attributes} id={blog.id} key={blog.id}/>
