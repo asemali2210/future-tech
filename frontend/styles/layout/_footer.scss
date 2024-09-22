@@ -1,0 +1,39 @@
+@import '../abstract/color';
+.footer__main{
+    .footer__list{
+        .footer__item{
+            margin-bottom: 15px;
+            color: $grey-3;
+            display: flex;
+            align-items: center;
+            .__tag{
+                background-color: $dark-4;
+                font-size: .8rem;
+                color: $white;
+                padding: 2px 7px;
+                margin-left: 10px;
+                border: 1px solid $dark-3;
+                background: linear-gradient(to left, hsla(48, 100%, 55%, 0.097) 1%, rgba(38,38,38,1) 100%);
+            }
+        }
+        &.__resources{
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+            .footer__item{
+                border: 1px solid $dark-4;
+                padding: 8px 20px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                .__icon{
+                    margin-left: 10px;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
