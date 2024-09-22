@@ -8,12 +8,14 @@ export default function useFetchApi(url) {
 
   useEffect(() => {
       async function fetchApi() {
+
         try {
-            
             const req = await fetch(url);
+
             if (!req.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
-              }
+            }
+
             const res = await req.json();
             setData(res.data);
             setError(null); 
@@ -28,5 +30,5 @@ export default function useFetchApi(url) {
 
   }, [url])
 
-  return { data, isLoading, error }
+  return { data, isLoading, error };
 }

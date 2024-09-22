@@ -51,19 +51,19 @@ export default function HomeResources() {
                             </div>
                             <div className="d-flex align-items-center  justify-content-between column-gap-1">
                               <div className="col-3 border-dark-4 rounded-4 p-3 bg-dark-2">
-                                <p className="my-2">Total Ebooks</p>
+                                <p className="mb-2">Total Ebooks</p>
                                 <p className="c-wh fw-semibold">Over 100 ebooks</p>
                               </div>
                               <div className="col-8 d-flex align-items-center justify-content-between border-dark-4 rounded-4 p-3 bg-dark-2">
                                 <div>
-                                  <p className="my-2">Download Formats</p>
+                                  <p className="mb-2">Download Formats</p>
                                   <p className="c-wh fw-semibold">PDF format for access.</p>
                                 </div>
                                 <button className="bg-dark-2 btn border-dark-4 p-3 py-2  c-wh fw-semibold">Preview <IoEyeSharp className="c-main"/></button>
                               </div>
                             </div>
                             <div className="col-12 border-dark-4 rounded-4 p-3 bg-dark-2">
-                              <p className="my-2">Average Author Expertise</p>
+                              <p className="mb-2">Average Author Expertise</p>
                               <p className="c-wh fw-semibold">Ebooks are authored by renowned experts with an average of 15 years of experience</p>
                             </div>
                           </div>
@@ -82,7 +82,7 @@ export default function HomeResources() {
                               <Image src={whitepapersIcon} alt="ebook-icon" />
                             </span>
                             <h3 className="hd-md c-wh fw-bold">Whitepapers</h3>
-                            <p className="__discription c-grey-1">Dive into comprehensive reports and analyses with our collection of whitepapers. </p>
+                            <p className="hd-sm  c-grey-1">Dive into comprehensive reports and analyses with our collection of whitepapers. </p>
                             <Link href='/resources' className="bg-dark-2 text-center border-dark-4 rounded-10 p-2 __link">Download Whitepapers Now <BsArrowUpRight/></Link>
                             <div className="d-flex align-items-center bg-dark-2 p-3 border-dark-4 rounded-10 gap-1">
                               <div className="mx-2"> 

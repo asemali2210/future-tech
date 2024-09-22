@@ -230,21 +230,6 @@
     }
 }
 
-.home__resources{
-    .home__resource__container{
-        .home__resource__right{
-           
-            
-            .__discription{
-                font-size: .9rem;
-            }
-            .__link{
-            }
-        }
-    }
-}
-
-
 .home__testimonials{
     .testimonials__box{
         .testimonial__body{
@@ -256,6 +241,42 @@
                 left: 50%;
                 transform: translateX(-50%);
                 column-gap: 7px;
+            }
+        }
+    }
+}
+
+.home__contact{
+    .home__contact__header{
+        margin-bottom: 80px;
+        .logo__img{
+            width: 100%;
+            padding: 15px;
+        }
+        .home__contact__tag{
+            background-color: #333333;
+            padding: 7px;
+            border-radius: 5px;
+            color: #fff;
+            margin-bottom: 20px;
+            
+            
+        }
+    }
+    .home__contact__boxes{
+        .home__contact__box{
+            .__top{
+                .__icon{
+                    background-color: $primary;
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    color: $black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
         }
     }
