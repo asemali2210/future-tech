@@ -16,7 +16,7 @@ export default  function SkeletonTestimonials() {
                     <div className="container">
                         <div className="row">
                             {Array.from({ length: 3 }).map((_, index) => (
-                            <div className="col-md-4 br-r">
+                            <div className="col-md-4 br-r" key={index}>
                                 <div className="py-5 px-4">
                                     <div className="d-flex mb-5 placeholder-glow align-items-center justify-content-center column-gap-3" >
                                         <div style={{width: '60px', height: '60px', borderRadius: '50%'}} className="placeholder"></div>
@@ -41,7 +41,7 @@ export default  function SkeletonTestimonials() {
                     <div className="container">
                         <div className="row">
                             {Array.from({ length: 3 }).map((_, index) => (
-                            <div className="col-md-4 br-r">
+                            <div className="col-md-4 br-r" key={index}>
                                 <div className="py-5 px-4">
                                     <div className="d-flex mb-5 placeholder-glow align-items-center justify-content-center column-gap-3" >
                                         <div style={{width: '60px', height: '60px', borderRadius: '50%'}} className="placeholder"></div>

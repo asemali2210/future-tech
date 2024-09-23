@@ -51,7 +51,7 @@ export default  function HomeBlogs() {
                         <div className="row">
                             <div className="col-12">
                                 <div className="home__blogs__filter__form">
-                                    <div className="row">
+                                    <div className="home__blogs__filter__btns d-flex column-gap-2 flex-nowrap overflow-x-scroll py-5">
                                         {
                                             tags.map(tag=> (
                                                 <FilterButton key={tag} tag={activeTag} btnTag={tag} onFilter={handleFilter} />

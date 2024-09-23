@@ -14,11 +14,11 @@ export default function Blog({blog,id }){
 
     return(
         <div className="home__blog__article">
-            <div className="row">
-                <div className="col-md-3">
-                    <div className="home__blog__article__auth  d-flex align-items-center">
+            <div className="row align-items-center align-items-md-start justify-content-between">
+                <div className="col-lg-3 col-7">
+                    <div className="home__blog__article__auth j d-flex align-items-center m-lg-0 mb-sm-5">
                         <div className="auth__img">
-                            <Image src={process.env.NEXT_PUBLIC_STRAPI_URL + blog.autherImg.data.attributes.url} quality={100} alt={blog.auther} width={60} height={60}/>
+                            <Image   layout="responsive" src={process.env.NEXT_PUBLIC_STRAPI_URL + blog.autherImg.data.attributes.url} quality={100} alt={blog.auther} />
                         </div>
                         <div className="auth__data">
                             <h2 className="hd-md c-wh">{blog.auther}</h2>
@@ -26,7 +26,7 @@ export default function Blog({blog,id }){
                         </div>
                     </div>
                 </div>
-                <div className="col-md-7">
+                <div className="col-md-6 col-lg-7 order-md-1 order-2">
                     <div className="home__blog__article__mid">
                         <p className="c-w blog__date">{d}</p>
                         <h5 className="c-wh blog__title">{blog.title}</h5>
@@ -53,7 +53,7 @@ export default function Blog({blog,id }){
                         </div>
                     </div>
                 </div>
-                <div className="col-md-2 align-self-center">
+                <div className="col-md-3 col-lg-2 col align-self-center d-md-flex my-md-0 my-4 justify-content-md-end">
                     <ForwordLink href={`/blogs/${id}`} content='View Blog' arrow radius />
                 </div>
             </div>

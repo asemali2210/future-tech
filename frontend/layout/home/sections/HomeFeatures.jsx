@@ -13,7 +13,7 @@ export default function HomeFeatures() {
               <div className="container">
               <div className="row ">
                 <div className="col-md-4 br-r p-0 m-0 d-flex align-items-center ">
-                  <div className="feature__left__heading py-5 px-2">
+                  <div className="feature__left__heading py-5 px-m-2 p-3  d-md-block d-flex flex-column align-items-center ">
                     <div className="heading__img">
                       <Image 
                       src={featureImg1}
@@ -24,7 +24,7 @@ export default function HomeFeatures() {
                     <h3 className="feature__heading h-md c-wh">
                       Future Technology Blog
                     </h3>
-                    <p className="text-sm">
+                    <p className="text-sm text-md-start text-center">
                       Stay informed with our blog section dedicated to future technology.
                     </p>
                   </div>
@@ -76,7 +76,7 @@ export default function HomeFeatures() {
               <div className="container">
               <div className="row ">
                 <div className="col-md-4 br-r p-0 m-0 d-flex align-items-center ">
-                  <div className="feature__left__heading py-5 px-2">
+                  <div className="feature__left__heading py-5 px-m-2 p-3  d-md-block d-flex flex-column align-items-center">
                     <div className="heading__img">
                       <Image 
                       src={featureImg2}

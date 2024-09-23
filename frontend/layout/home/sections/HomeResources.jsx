@@ -10,7 +10,7 @@ import whitepapersImg from '@/public/assests/images/whitepapersImg.png';
 import { IoEyeSharp } from "react-icons/io5";
 export default function HomeResources() {
   return (
-    <div className="home__resources bg-dark-1">
+    <div className="home__resources bg-dark-1 overflow-hidden">
             <SectionHead
             href="/" content="View All Resources" link
             tag="Your Gateway to In-Depth Information" head="Unlock Valuable Knowledge with FutureTech's Resources"

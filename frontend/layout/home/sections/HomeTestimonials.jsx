@@ -1,8 +1,6 @@
 'use client'
 import SectionHead from "@/components/ui/sectionHead";
-import { LiaStarSolid } from "react-icons/lia";
 import useFetchApi from '@/hooks/useFetchApi';
-import Image from "next/image";
 import ErorrReload from "@/components/ui/ErorrReload";
 import SkeletonTestimonials from "../ui/SkeletonTestimonials";
 import Testimonial from "../ui/Testimonial";
@@ -30,7 +28,7 @@ export default  function HomeTestimonials() {
                     <div className="row">
                         {
                             data.slice(0,3).map(testimonial => (
-                                <Testimonial testimonial={testimonial.attributes} id={testimonial.id}/>
+                                <Testimonial testimonial={testimonial.attributes} id={testimonial.id} key={testimonial.id}/>
                             ))
                         }
                     </div>
@@ -41,7 +39,7 @@ export default  function HomeTestimonials() {
                     <div className="row">
                         {
                             data.slice(3,6).map(testimonial => (
-                                <Testimonial testimonial={testimonial.attributes} id={testimonial.id}/>
+                                <Testimonial testimonial={testimonial.attributes} id={testimonial.id} key={testimonial.id}/>
                             ))
                         }
                     </div>

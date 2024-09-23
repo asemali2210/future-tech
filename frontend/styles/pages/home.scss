@@ -1,4 +1,6 @@
 @import '../abstract/color';
+@import '../core/mixins';
+
 .home__header{
     border-bottom: 1px solid #262626;
     .left__col{
@@ -204,6 +206,9 @@
         .row{
             column-gap: 20px;
         }
+        .home__blogs__filter__btns{
+            @include scrollbar();
+        }
         .btn__filter__item{
             margin: 20px 0 0;
             border: none;
@@ -214,6 +219,31 @@
             color: $grey-1;
             &.--active{
                 background-color: $dark-2;
+            }
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .blog__container{
+            .home__blog__article{
+                .home__blog__article__auth{
+                    justify-content: space-between;
+                    align-items: center;
+                    column-gap: 7px ;
+                    .auth__img{
+                    }
+                    .auth__data{
+                        h2{
+                            font-size: .9rem;
+                            font-weight: 700;
+                            margin-bottom: 2px;
+                            white-space: nowrap;
+                        }
+                        p{
+                            font-size: .8rem;
+                            white-space: nowrap;
+                        }
+                    }
+                }
             }
         }
     }
