@@ -62,8 +62,11 @@
     border: 1px solid $grey-4;
 }
 
-
-
+.no-br-md{
+    @media screen and (max-width: 1024px) {
+        border: unset !important;
+    }
+}
 
 /* buttons */
 .--btn-primary{
@@ -83,4 +86,4 @@
 
 .f-inter {
     font-family: "Inter", sans-serif;
-  }
+}

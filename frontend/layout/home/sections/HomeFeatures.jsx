@@ -12,7 +12,7 @@ export default function HomeFeatures() {
             <div className="feature__topic">
               <div className="container">
               <div className="row ">
-                <div className="col-md-4 br-r p-0 m-0 d-flex align-items-center ">
+                <div className="col-md-4 br-r no-br-sm p-0 m-0 d-flex align-items-center ">
                   <div className="feature__left__heading py-5 px-m-2 p-3  d-md-block d-flex flex-column align-items-center ">
                     <div className="heading__img">
                       <Image 
@@ -75,7 +75,7 @@ export default function HomeFeatures() {
             <div className="feature__topic">
               <div className="container">
               <div className="row ">
-                <div className="col-md-4 br-r p-0 m-0 d-flex align-items-center ">
+                <div className="col-md-4 br-r no-br-sm p-0 m-0 d-flex align-items-center ">
                   <div className="feature__left__heading py-5 px-m-2 p-3  d-md-block d-flex flex-column align-items-center">
                     <div className="heading__img">
                       <Image 

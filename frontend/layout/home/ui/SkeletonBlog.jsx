@@ -11,9 +11,9 @@ export default function SkeletonBlog() {
                             {Array.from({ length: 3 }).map((_, index) => (
                                 <div  className="blog__container py-5 " key={index}>
                                     <div className="row placeholder-glow ">
-                                        <div className="col-md-3">
+                                        <div className="col-md-3 my-2">
                                             <div className="d-flex align-items-center gap-3">
-                                                <div className="col-2 placeholder" 
+                                                <div className="col-2 placeholder m-d-0 my-2" 
                                                     style={{width: `60px`, height: '60px', borderRadius: '50%'}}>
                                                 </div>
                                                 <div className="auth__data placeholder-glow col-9">
@@ -22,12 +22,12 @@ export default function SkeletonBlog() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-md-7 d-flex row-gap-3 flex-column gap-2">
+                                        <div className="col-md-7 d-flex row-gap-3 flex-column gap-2 m-d-0 my-4">
                                             <div className="col-4 placeholder rounded"></div>
                                             <div className="col-6 placeholder rounded"></div>
                                             <div className="col-10 placeholder rounded"></div>
                                         </div> 
-                                        <div className="col-md-2 align-self-center placeholder rounded" style={{height: '60px'}}>
+                                        <div className="col-md-2 align-self-center placeholder rounded d-md-block d-none" style={{height: '60px'}}>
                                         </div>
                                     </div>
                                 </div>
