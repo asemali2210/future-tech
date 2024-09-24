@@ -14,8 +14,8 @@ export default  function SectionHead({head,tag, link,content,href }) {
                     </div>
                 </div>
                 <div className="col-md-4 d-flex justify-content-md-end">
-                    <div className="right__link d-flex col-12">
-                        {link? <ForwordLink href={href} content={content} arrow radius /> : null}
+                    <div className="right__link d-flex col-12 col-md-auto">
+                        {link? <ForwordLink href={href} content={content} /> : null}
                     </div>
                 </div>
             </div>

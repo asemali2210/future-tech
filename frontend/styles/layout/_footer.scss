@@ -21,6 +21,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: start;
+                overflow: hidden;
             }
             .footer__item{
                 border: 1px solid $dark-4;
@@ -29,9 +30,20 @@
                 display: flex;
                 align-items: center;
                 justify-content: start;
+                white-space: nowrap;
+                overflow: hidden;
                 .__icon{
                     margin-left: 10px;
                     color: $primary;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .footer__list{
+            &.__resources{
+                .footer__item{
+                    
                 }
             }
         }

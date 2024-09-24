@@ -23,7 +23,7 @@ export default  function HomeTestimonials() {
             tag="What Our Readers Say"
         />
         <div className="container-fluid p-0">
-            <div className="col-12  br-b">
+            <div className="col-12  br-b no-br-md">
                 <div className="container">
                     <div className="row">
                         {
@@ -34,7 +34,7 @@ export default  function HomeTestimonials() {
                     </div>
                 </div>
             </div>
-            <div className="col-12  br-b">
+            <div className="col-12  br-b no-br-md">
                 <div className="container">
                     <div className="row">
                         {

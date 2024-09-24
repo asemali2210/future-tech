@@ -13,7 +13,6 @@ export default  function HomeBlogs() {
     const { blogsData, tags, isLoading, error } = useFetchBlogs();
     const [filteredBlogs, setFilteredBlogs] = useState(blogsData);
     const [activeTag, setActiveTag] = useState('All');
-    
 
     useEffect(() => {
         setFilteredBlogs(blogsData);
@@ -31,7 +30,6 @@ export default  function HomeBlogs() {
         }
 
     }, [blogsData]);
-
 
     if (isLoading) return <SkeletonBlog />
 
