@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import { FaUpRightAndDownLeftFromCenter } from "react-icons/fa6";
 import '@/styles/layout/_footer.scss';
+
 export default  function Footer() {
   return (
     <div className="footer__main bg-dark-1 pt-5 pb-3 ">

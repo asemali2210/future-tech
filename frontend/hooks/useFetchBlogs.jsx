@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import useFetchApi from "./useFetchApi";
 
 export default function useFetchBlogs() {
 
@@ -14,9 +15,7 @@ export default function useFetchBlogs() {
             setBlogsData(data.data);
     
             // extract tags 
-            const extractedTags = data.data.map(blog => blog.attributes.tags).flat().concat('All').reverse();
-            setTags([...new Set(extractedTags)]); // Avoid duplicates
-
+            
     
         } catch(err) {
             setError(err.message)
@@ -28,5 +27,6 @@ export default function useFetchBlogs() {
 
   }, [])
 
+  useFetchApi()
   return { blogsData, tags, isLoading, error }
 }

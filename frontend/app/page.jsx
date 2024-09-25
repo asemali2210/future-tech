@@ -1,23 +1,30 @@
 import HomeHeader from "@/layout/home/sections//HomeHeader";
-import HomeBlogs from "@/layout/home/sections/HomeBlogs";
+import Blogs from "@/components/FilterdBlogs";
 import HomeFeatures from "@/layout/home/sections/HomeFeatures";
 import SubHeader from "@/layout/home/sections/SubHeader";
 import HomeResources from "@/layout/home/sections/HomeResources";
 import HomeTestimonials from "@/layout/home/sections/HomeTestimonials";
-import HomeContact from "@/layout/home/sections/HomeContact";
+import Contact from "@/components/Contact";
 
 
-export default async function Home() {
+export default function Home() {
 
   return (
     <>
       <HomeHeader />
       <SubHeader />
       <HomeFeatures />
-      <HomeBlogs />
+      <Blogs 
+        url={`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?populate=*`}
+        head="Explore FutureTech's In-Depth Blog Posts"
+        tag="A Knowledge Treasure Trove"
+        content="View All blogs"
+        href='/blogs'
+
+      />
       <HomeResources />
       <HomeTestimonials />
-      <HomeContact />
+      <Contact />
     </>
   )
 }

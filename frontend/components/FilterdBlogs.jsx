@@ -3,33 +3,46 @@
 import SectionHead from "@/components/ui/sectionHead";
 import { useState, useEffect, useCallback } from 'react'
 import useFetchBlogs from "@/hooks/useFetchBlogs";
-import FilterButton from "../ui/FilterButton";
-import Blog from "../ui/Blog";
+import FilterButton from "./ui/FilterButton";
+import Blog from "./ui/Blog";
 import ErorrReload from "@/components/ui/ErorrReload";
-import SkeletonBlog from "../ui/skeletonBlog";
+import SkeletonBlog from "./ui/SkeletonBlog";
+import useFetchApi from "@/hooks/useFetchApi";
 
-export default  function HomeBlogs() {
+export default  function Blogs({url,tag,head,content,href}) {
 
-    const { blogsData, tags, isLoading, error } = useFetchBlogs();
-    const [filteredBlogs, setFilteredBlogs] = useState(blogsData);
+    // fetches blog data from the provided URL
+    const { data, isLoading, error } = useFetchApi(`${url}`);
+
+    // Local states for filtering blogs and active tag selection
     const [activeTag, setActiveTag] = useState('All');
+    const [filteredBlogs, setFilteredBlogs] = useState([]);
+    const [tags, setTags] = useState(['All']);
+
 
     useEffect(() => {
-        setFilteredBlogs(blogsData);
-      }, [blogsData]);
-
-      
-    const handleFilter = useCallback((filterParam) => {
-        if (filterParam === 'All') {
-            setFilteredBlogs(blogsData);
-            setActiveTag('All');
-        } else {
-            const newBlogs = blogsData.filter(blog => blog.attributes.tags.includes(filterParam));
-            setFilteredBlogs(newBlogs);
-            setActiveTag(filterParam);
+        if(data){
+            // Extract all tags from the fetched blogs and avoid duplicates using Set
+            const extractedTags = data.map(blog => blog.attributes.tags).flat().concat('All').reverse();
+            setTags(['All', ...new Set(extractedTags)]); // Avoid duplicates
+            setFilteredBlogs(data);
         }
 
-    }, [blogsData]);
+      }, [data]);
+    
+      
+    const handleFilter = useCallback((filterParam) => {
+        if(!data) return;
+
+        if (filterParam === 'All') {
+            setFilteredBlogs(data);
+        } else {
+            const filtered  = data.filter(blog => blog.attributes.tags.includes(filterParam));
+            setFilteredBlogs(filtered );
+        }
+        setActiveTag(filterParam);
+
+    }, [data]);
 
     if (isLoading) return <SkeletonBlog />
 
@@ -39,8 +52,8 @@ export default  function HomeBlogs() {
     return (
         <div className="home__blogs bg-dark-1">
             <SectionHead 
-            tag="A Knowledge Treasure Trove" head="Explore FutureTech's In-Depth Blog Posts" link
-            href="/blogs" content="View all content"
+            tag={tag} head={head} link
+            href={href} content={content}
         />
         <div className="container-fluid">
             <div className="row">

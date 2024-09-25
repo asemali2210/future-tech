@@ -1,0 +1,37 @@
+@import '../../abstract/color';
+
+.component__contact{
+    .component__contact__header{
+        margin-bottom: 80px;
+        .logo__img{
+            width: 100%;
+            padding: 15px;
+        }
+        .component__contact__tag{
+            background-color: #333333;
+            padding: 7px;
+            border-radius: 5px;
+            color: #fff;
+            margin-bottom: 20px;
+            
+            
+        }
+    }
+    .component__contact__boxes{
+        .component__contact__box{
+            .__top{
+                .__icon{
+                    background-color: $primary;
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    color: $black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

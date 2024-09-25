@@ -18,11 +18,11 @@ export default function HomeResources() {
         <div className="container-fluid">
             <div className="row">
               <div className="col-12 p-0 br-b">
-                <div className="home__resource__container py-4">
+                <div className="home__resource__container py-4 py-md-0">
                   <div className="container">
                     <div className="row">
-                        <div className="col-lg-4  br-r no-br-md">
-                          <div className="home__resource__left pe-4 py-4 p row-gap-4 d-flex flex-column">
+                        <div className="col-lg-4   br-r no-br-md">
+                          <div className="home__resource__left py-5  pe-4  p row-gap-4 d-flex flex-column">
                             <span className="__icon">
                               <Image src={ebookIcon} alt="ebook-icon" />
                             </span>
@@ -41,7 +41,7 @@ export default function HomeResources() {
                           </div>
                         </div>
                         <div className="col-lg-8">
-                          <div className="home__resource__right py-4 ps-md-4  d-flex flex-column row-gap-4">
+                          <div className="home__resource__right py-5 ps-md-4 py-5  d-flex flex-column row-gap-4">
                             <div className="home__resource__top  d-flex align-md-items-center row-gap-3 justify-content-between flex-md-row flex-column">
                               <p className="col-md-2 c-wh text-nowrap fw-bold">Variety of Topics</p>
                               <p className="col-md-9 c-grey-1">Topics include AI in education (25%), renewable energy (20%), healthcare (15%), space exploration (25%), and biotechnology (15%).</p>
@@ -73,11 +73,11 @@ export default function HomeResources() {
                 </div>
               </div>
               <div className="col-12 p-0 br-b">
-                <div className="home__resource__container py-4">
+                <div className="home__resource__container py-4 py-md-0">
                   <div className="container">
                     <div className="row">
                         <div className="col-lg-4  br-r no-br-md">
-                          <div className="home__resource__left pe-4 py-4 p row-gap-4 d-flex flex-column">
+                          <div className="home__resource__left py-5  pe-4 row-gap-4 d-flex flex-column">
                             <span className="__icon">
                               <Image src={whitepapersIcon} alt="ebook-icon" />
                             </span>
@@ -96,7 +96,7 @@ export default function HomeResources() {
                           </div>
                         </div>
                         <div className="col-lg-8">
-                          <div className="home__resource__right py-4 ps-md-4  d-flex flex-column row-gap-4">
+                          <div className="home__resource__right py-5 ps-md-4  d-flex flex-column row-gap-4">
                             <div className="home__resource__top  d-flex align-md-items-center row-gap-3 justify-content-between flex-md-row flex-column">
                               <p className="col-md-2 c-wh text-nowrap fw-bold">Topics Coverage</p>
                               <p className="col-md-9 c-grey-1">Whitepapers cover quantum computing (20%), AI ethics (15%), space mining prospects (20%), AI in healthcare (15%), and renewable energy strategies (30%).</p>
