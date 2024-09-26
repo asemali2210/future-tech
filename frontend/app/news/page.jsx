@@ -2,11 +2,11 @@ import Contact from "@/components//Contact";
 import Blogs from "@/components/FilterdBlogs";
 import '@/styles/components/sections/_contact.scss';
 
-export default function podcasts() {
+export default function News() {
   return (
     <div className="news__page">
       <Blogs 
-        url={`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/blogs?populate=*`}
+        url={getStrapiUrl('/api/blogs?populate=*')}
         head="Discover the World of Headlines"
         tag="Welcome to Our News Hub"
         content="View All News"

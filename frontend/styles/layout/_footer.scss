@@ -20,7 +20,7 @@
             ul{
                 display: flex;
                 flex-direction: column;
-                align-items: start;
+                align-items: flex-start;
                 overflow: hidden;
             }
             .footer__item{
@@ -29,7 +29,7 @@
                 border-radius: 10px;
                 display: flex;
                 align-items: center;
-                justify-content: start;
+                justify-content: flex-start;
                 white-space: nowrap;
                 overflow: hidden;
                 .__icon{

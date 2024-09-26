@@ -12,6 +12,7 @@ import useFetchApi from "@/hooks/useFetchApi";
 export default  function Blogs({url,tag,head,content,href}) {
 
     // fetches blog data from the provided URL
+    console.log(url)
     const { data, isLoading, error } = useFetchApi(`${url}`);
 
     // Local states for filtering blogs and active tag selection
@@ -24,7 +25,7 @@ export default  function Blogs({url,tag,head,content,href}) {
         if(data){
             // Extract all tags from the fetched blogs and avoid duplicates using Set
             const extractedTags = data.map(blog => blog.attributes.tags).flat().concat('All').reverse();
-            setTags(['All', ...new Set(extractedTags)]); // Avoid duplicates
+            setTags([ ...new Set(extractedTags)]); // Avoid duplicates
             setFilteredBlogs(data);
         }
 

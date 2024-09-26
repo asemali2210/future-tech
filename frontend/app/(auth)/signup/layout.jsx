@@ -1,10 +1,10 @@
 
 export const metadata = {
-    title: 'Future Tech | Podcasts',
+    title: 'Future Tech | Login',
     description: 'Explore the Frontiers of Artificial Intelligence'
 }
 
-export default function blogLayout({ children }) {
+export default function loginLayout({ children }) {
     return (
       <div>
         {children}
