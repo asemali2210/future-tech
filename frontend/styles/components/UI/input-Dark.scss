@@ -1,0 +1,31 @@
+@import '../../abstract/color';
+/* inputs and forms */
+
+.input__dark__container{
+    input.input__dark{
+        padding: 10px;
+        border-radius: 10px;
+        background-color: $dark-2 ;
+        border: 2px solid $grey-4;
+        transition: all .8s;
+        font-size: 1rem;
+        color: $grey-1 ;
+        &:focus{
+            outline: 0;
+            border-color:  $grey-3;
+        }
+        &::placeholder{
+            color: $grey-4;
+            font-size: 1rem;
+        }
+    }
+    .error__message{
+        color: #F15A59 !important;
+    }
+}
+
+.submit__btn{
+    background-color: $primary;
+    border-radius: 10px;
+    padding: 5px 10px;   
+}

@@ -2,7 +2,7 @@
 
 export default  function AuthPage({leftContent,children}) {
   return (
-    <div className='auth__page'>
+    <div className='auth__page bg-dark-1'>
         <div className='container'>
             <div className='row'>
                 <div className='col-lg-5'>

@@ -64,8 +64,8 @@ export default  function Navbar() {
                   </li>
                 </ul>
                 <button className='--btn-primary'>
-                  <Link href='/contact' className='font-weight-700'>
-                    Contact Us
+                  <Link href='/login' className='font-weight-700'>
+                    Login
                   </Link>
                 </button>
               </div>
