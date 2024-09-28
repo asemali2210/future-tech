@@ -53,7 +53,7 @@ const initialValues = {
               <Formik validationSchema={validationSchema} initialValues={initialValues}
                 onSubmit={onSubmit}
               >
-              {({ errors }) => (
+              {({ errors,touched }) => (
                 <Form  className="d-flex flex-column row-gap-2 align-items-start ">
                      <Field  
                        label="Email"
@@ -62,6 +62,7 @@ const initialValues = {
                        id='email'
                        placeholder="Enter your Email"
                        component={InputDark}
+                       
                      />
                  
                   <Field 
@@ -71,8 +72,8 @@ const initialValues = {
                     label="password"
                     placeholder="password"
                     component={InputDark}
+                    
                   />
-
                   <button type="submit" className="submit__btn mt-3 py-2 px-5">Submit</button>
                 </Form>
               )}
