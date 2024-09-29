@@ -1,5 +1,8 @@
 .navbar__main-top{
     padding: 20px 0;
+    @media screen and (max-width: 768px) {
+        font-size: .8rem;
+    }
 }
 .navbar__main{
     background-color: $dark-3;
@@ -28,21 +31,26 @@
                         color: $white;
                     }
                 }
+                
             }
         }
+    }
+    .--btn-primary.--active{
+        opacity: .5;
+        border: 1px solid $dark-2;
     }
     .toggle__navbar{
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 2.5rem;
+        cursor: pointer;
     }
     @media screen and (max-width: 768px) {
         .menu__mob{
             padding-top: 30px;
             display: none;
             &.show__nav{
-                
                 display: block;
             }
             .navabar__links{
@@ -53,17 +61,17 @@
                 flex-direction: column;
                 .navbar__item{
                     text-align: center;
-                    margin: 10px 0;
+                    margin: 5px 0;
                     font-weight: 500;
                     font-size: 1.1rem;
-                    padding: 15px 20px;
+                    padding: 5px 20px;
                 }
             }
             .--btn-primary{
                 margin: 10px 0;
-                font-weight: 500;
-                font-size: 1.3rem;
-                padding: 15px 20px;
+                font-weight: 400;
+                font-size: 1.1rem;
+                padding: 5px 20px;
             }
         }
     }

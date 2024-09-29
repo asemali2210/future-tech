@@ -1,6 +1,7 @@
 import Contact from "@/components//Contact";
 import Blogs from "@/components/FilterdBlogs";
 import '@/styles/components/sections/_contact.scss';
+import { getStrapiUrl } from "@/utils/strapi";
 
 export default function News() {
   return (

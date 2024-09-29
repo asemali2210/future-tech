@@ -63,11 +63,18 @@ export default  function Navbar() {
                     </Link>
                   </li>
                 </ul>
-                <button className='--btn-primary'>
-                  <Link href='/login' className='font-weight-700'>
-                    Login
-                  </Link>
-                </button>
+                <div className='d-flex  gap-2'>
+                  <button  className={currPath == '/login' ? "navbar__item --active --btn-primary" : 'navbar__item --btn-primary'}>
+                    <Link href='/login' className='font-weight-700'>
+                      Login
+                    </Link>
+                  </button>
+                  <button className={currPath == '/signup' ? "navbar__item --active --btn-primary" : 'navbar__item --btn-primary'}>
+                    <Link href='/signup' className='font-weight-700'>
+                      Signup
+                    </Link>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
