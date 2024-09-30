@@ -4,8 +4,13 @@ import * as Yup from 'yup';
 import {  Field, Form, Formik } from 'formik';
 import { getStrapiUrl } from "@/utils/strapi";
 import InputDark from "@/components/ui/inputs/InputDark";
-export default function login() {
+import { useRouter } from 'next/navigation';
+import {useDispatch } from 'react-redux';
+import { authLogout } from "@/store/slices/authSlice";
 
+export default function login() {
+  const router = useRouter();
+  const dispatch = useDispatch();
   const initialValues = {
     email: '',
     password: '',
@@ -35,8 +40,10 @@ export default function login() {
       });
      
       const { jwt } = await res.json();
-    
+      dispatch(authLogout(jwt))
       localStorage.setItem('token', jwt);
+
+      router.push('/');
 
     } catch (err) {
       console.log(err.message)

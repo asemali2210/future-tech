@@ -395,6 +395,39 @@ export interface ApiBlogBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiNewNew extends Schema.CollectionType {
+  collectionName: 'news';
+  info: {
+    singularName: 'new';
+    pluralName: 'news';
+    displayName: 'news';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 70;
+      }>;
+    body: Attribute.Text & Attribute.Required;
+    category: Attribute.String & Attribute.Required;
+    image: Attribute.Media<'images'> & Attribute.Required;
+    date: Attribute.Date & Attribute.Required;
+    author: Attribute.String & Attribute.Required;
+    interactions: Attribute.Component<'interaction.interactionss', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::new.new', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::new.new', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTestimonialTestimonial extends Schema.CollectionType {
   collectionName: 'testimonials';
   info: {
@@ -878,6 +911,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::blog.blog': ApiBlogBlog;
+      'api::new.new': ApiNewNew;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;

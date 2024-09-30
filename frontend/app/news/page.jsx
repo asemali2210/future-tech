@@ -5,7 +5,19 @@ import { getStrapiUrl } from "@/utils/strapi";
 
 export default function News() {
   return (
-    <div className="news__page">
+    <div className="news__page bg-dark-1">
+      <div className="container">
+        <div className="news__header br-b py-5">
+          <p className="hd-xlg c-wh">
+            Today's Headlines: Stay
+          </p>
+          <p className="d-flex">
+            <span className="hd-xlg c-wh">Informed</span>
+            <span className="ms-md-5 p-3">Explore the latest news from around the world. We bring you up-to-the-minute updates on the most significant events, trends, and stories. Discover the world through our news coverage.</span>
+          </p>
+        </div>
+
+      </div>
       <Blogs 
         url={getStrapiUrl('/api/blogs?populate=*')}
         head="Discover the World of Headlines"

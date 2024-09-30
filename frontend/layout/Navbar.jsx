@@ -6,13 +6,17 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { BsArrowUpRight } from "react-icons/bs";
 import { HiBars3BottomLeft } from "react-icons/hi2";
+import { useSelector } from 'react-redux';
 export default  function Navbar() {
+  const isAuth = useSelector((state) => state.auth.isAuthenticated)
+  console.log(isAuth)
   const currPath = usePathname();
   const [navOpen, setNavOpen] = useState(false)
   const toggleNav = () => {
     navOpen? setNavOpen(false) : setNavOpen(true)
     console.log(navOpen)
   }
+  console.log(isAuth)
   return (
     <>
       <div className='bg-dark-1'>
