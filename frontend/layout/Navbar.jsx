@@ -7,6 +7,8 @@ import { useState } from 'react';
 import { BsArrowUpRight } from "react-icons/bs";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { useSelector } from 'react-redux';
+
+
 export default  function Navbar() {
   const isAuth = useSelector((state) => state.auth.isAuthenticated)
   console.log(isAuth)

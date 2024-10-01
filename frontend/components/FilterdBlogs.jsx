@@ -2,7 +2,6 @@
 
 import SectionHead from "@/components/ui/sectionHead";
 import { useState, useEffect, useCallback } from 'react'
-import useFetchBlogs from "@/hooks/useFetchBlogs";
 import FilterButton from "./ui/FilterButton";
 import Blog from "./ui/Blog";
 import ErorrReload from "@/components/ui/ErorrReload";
@@ -10,16 +9,12 @@ import SkeletonBlog from "./ui/SkeletonBlog";
 import useFetchApi from "@/hooks/useFetchApi";
 
 export default  function Blogs({url,tag,head,content,href}) {
-
-    // fetches blog data from the provided URL
-    console.log(url)
     const { data, isLoading, error } = useFetchApi(`${url}`);
 
     // Local states for filtering blogs and active tag selection
     const [activeTag, setActiveTag] = useState('All');
     const [filteredBlogs, setFilteredBlogs] = useState([]);
     const [tags, setTags] = useState(['All']);
-
 
     useEffect(() => {
         if(data){
@@ -28,7 +23,7 @@ export default  function Blogs({url,tag,head,content,href}) {
             setTags([ ...new Set(extractedTags)]); // Avoid duplicates
             setFilteredBlogs(data);
         }
-
+        
       }, [data]);
     
       
