@@ -3,12 +3,14 @@ import Blogs from "@/components/FilterdBlogs";
 import NewsGrid from "@/layout/news/NewsGrid";
 import '@/styles/components/sections/_contact.scss';
 import { getStrapiUrl } from "@/utils/strapi";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export default function News() {
   return (
     <div className="news__page bg-dark-1">
       <div className="container">
-        <div className="news__header br-b py-5">
+        <div className="news__header py-5">
           <p className="hd-xlg c-wh">
             Today's Headlines: Stay
           </p>
@@ -21,7 +23,6 @@ export default function News() {
 
       </div>
       <NewsGrid />
-
       <Blogs 
         url={getStrapiUrl('/api/blogs?populate=*')}
         head="Discover the World of Headlines"
