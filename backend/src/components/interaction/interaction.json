@@ -2,8 +2,19 @@
   "collectionName": "components_interaction_interactions",
   "info": {
     "displayName": "interaction",
-    "icon": "eye"
+    "icon": "eye",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "likes": {
+      "type": "string"
+    },
+    "shares": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "string"
+    }
+  }
 }

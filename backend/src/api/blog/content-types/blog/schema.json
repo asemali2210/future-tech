@@ -46,14 +46,13 @@
         "images"
       ]
     },
-    "interaction": {
-      "displayName": "Interactionss",
-      "type": "component",
-      "repeatable": false,
-      "component": "interaction.interactionss"
-    },
     "date": {
       "type": "date"
+    },
+    "interaction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "interaction.interaction"
     }
   }
 }

@@ -383,8 +383,8 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     > &
       Attribute.Required;
     autherImg: Attribute.Media<'images'> & Attribute.Required;
-    interaction: Attribute.Component<'interaction.interactionss'>;
     date: Attribute.Date;
+    interaction: Attribute.Component<'interaction.interaction'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -417,7 +417,7 @@ export interface ApiNewNew extends Schema.CollectionType {
     image: Attribute.Media<'images'> & Attribute.Required;
     date: Attribute.Date & Attribute.Required;
     author: Attribute.String & Attribute.Required;
-    interactions: Attribute.Component<'interaction.interactionss', true>;
+    interactions: Attribute.Component<'interaction.interaction', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

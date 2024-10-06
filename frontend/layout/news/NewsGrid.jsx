@@ -4,6 +4,8 @@ import { fetchNews } from '@/store/slices/newsSlice';
 import { useDispatch, useSelector } from "react-redux";
 import Image from 'next/image';
 import { getStrapiUrl } from '@/utils/strapi';
+import Link from 'next/link';
+import ForwordLink from '@/components/buttons/ForwordLink';
 export default function NewsGrid() {
     const dispatch = useDispatch();
     const news = useSelector(state => state.news)
@@ -52,10 +54,38 @@ export default function NewsGrid() {
                       </div>
                 </div>
               </div>
+              <div className='col-12 br-b'>
+                <div className='news__boxes py-5'>
+                  <div className='container'>
+                    <div className='row row-gap-5'>
+                      {
+                        news.news.data.slice(0,3).map(newsD => (
+                          <div className='col-md-4'>
+                          <div className='newx__box'>
+                            <Image src={getStrapiUrl(newsD.attributes.image.data.attributes.url)} className="img-fluid" width={400} height={400} alt={newsD.title} />
+                              <Link className='h6 mt-3 c-wh text-nowrap text-truncate d-block' href={`/news/${newsD.id}`}>
+                                  {newsD.attributes.title}
+                              </Link>
+                              <p>{newsD.attributes.category}</p>
+                            <div  className='mt-2 d-flex align-items-center justify-content-between'>
+                              <div className='iteractions'>
+                                <span className='c-wh'>{newsD.attributes.interactions.likes}</span>
+                                <span className='c-wh'>{newsD.attributes.interactions.likes}</span>
+                              </div>
+                              <div>
+                                <ForwordLink href={`/news/${newsD.id}`} content="Read more"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        ))
+                      }
+                    </div>
+                  </div>
+                </div>
               </div>
-    
+              </div>
             </div>
-            {news.status == 'succeeded' && news.news.data.map( newsid => <div className='c-wh' key={newsid.id}>{newsid.attributes.title}</div>)}
         </div>
       )
     }

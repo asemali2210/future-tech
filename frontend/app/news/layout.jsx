@@ -1,6 +1,6 @@
 
 export const metadata = {
-    title: 'Future Tech | Podcasts',
+    title: 'Future Tech | News',
     description: 'Explore the Frontiers of Artificial Intelligence'
 }
 

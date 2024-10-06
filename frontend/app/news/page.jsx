@@ -3,8 +3,6 @@ import Blogs from "@/components/FilterdBlogs";
 import NewsGrid from "@/layout/news/NewsGrid";
 import '@/styles/components/sections/_contact.scss';
 import { getStrapiUrl } from "@/utils/strapi";
-import { Suspense } from "react";
-import Loading from "./loading";
 
 export default function News() {
   return (

@@ -44,7 +44,7 @@
     "interactions": {
       "type": "component",
       "repeatable": true,
-      "component": "interaction.interactionss"
+      "component": "interaction.interaction"
     }
   }
 }
