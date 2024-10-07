@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import logoImg from '@/public/assests/images/Logo.svg';
 import { BsArrowUpRight } from "react-icons/bs";
+import '@/styles/components/sections/_contact.scss';
 
 export default function Contact() {
   return (

@@ -1,24 +1,27 @@
 'use client';
 import logo  from '@/public/assests/logo.svg';
+import { authLogout } from '@/store/slices/authSlice';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { BsArrowUpRight } from "react-icons/bs";
 import { HiBars3BottomLeft } from "react-icons/hi2";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 export default  function Navbar() {
-  const isAuth = useSelector((state) => state.auth.isAuthenticated)
-  console.log(isAuth)
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
+  const dispatch = useDispatch()
+  const logOut = ()=> {
+    dispatch(authLogout());
+    localStorage.removeItem('token');
+  }
   const currPath = usePathname();
   const [navOpen, setNavOpen] = useState(false)
   const toggleNav = () => {
     navOpen? setNavOpen(false) : setNavOpen(true)
-    console.log(navOpen)
   }
-  console.log(isAuth)
   return (
     <>
       <div className='bg-dark-1'>
@@ -70,16 +73,34 @@ export default  function Navbar() {
                   </li>
                 </ul>
                 <div className='d-flex  gap-2'>
-                  <button  className={currPath == '/login' ? "navbar__item --active --btn-primary" : 'navbar__item --btn-primary'}>
-                    <Link href='/login' className='font-weight-700'>
-                      Login
-                    </Link>
-                  </button>
-                  <button className={currPath == '/signup' ? "navbar__item --active --btn-primary" : 'navbar__item --btn-primary'}>
-                    <Link href='/signup' className='font-weight-700'>
-                      Signup
-                    </Link>
-                  </button>
+                  {
+                    isAuthenticated? (
+                      <>
+                        <div>
+                          Hello {user.username}
+                        </div>
+                        <button  className={currPath == '/login' ? "navbar__item --active --btn-primary" : 'navbar__item --btn-primary'} onClick={logOut}>
+                          logout
+                        </button>
+                      
+                      </>
+
+                    ) : (
+                      <>
+                      <button  className={currPath == '/login' ? "navbar__item --active --btn-primary" : 'navbar__item --btn-primary'}>
+                        <Link href='/login' className='font-weight-700'>
+                          Login
+                        </Link>
+                      </button>
+                      <button className={currPath == '/signup' ? "navbar__item --active --btn-primary" : 'navbar__item --btn-primary'}>
+                        <Link href='/signup' className='font-weight-700'>
+                          Signup
+                        </Link>
+                      </button>
+                      </>
+                    )
+                  
+                  }
                 </div>
               </div>
             </div>

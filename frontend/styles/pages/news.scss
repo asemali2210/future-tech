@@ -1,0 +1,20 @@
+@import '../abstract/color';
+.news__boxes{
+    .news__interaction{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        padding: 4px 10px;
+        border-radius: 50px;
+        border: 1px solid #262626;
+        background-color: $dark-2;
+        color: $grey-1;
+        font-size: 1.1rem;
+        .__icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

@@ -6,7 +6,7 @@ import { getStrapiUrl } from "@/utils/strapi";
 import InputDark from "@/components/ui/inputs/InputDark";
 import { useRouter } from 'next/navigation';
 import {useDispatch } from 'react-redux';
-import { authLogout } from "@/store/slices/authSlice";
+import { authLogin } from "@/store/slices/authSlice";
 
 export default function login() {
   const router = useRouter();
@@ -40,9 +40,7 @@ export default function login() {
       });
      
       const { jwt } = await res.json();
-      dispatch(authLogout(jwt))
       localStorage.setItem('token', jwt);
-
       router.push('/');
 
     } catch (err) {

@@ -1,9 +1,8 @@
 import Contact from "@/components//Contact";
 import Blogs from "@/components/FilterdBlogs";
 import NewsGrid from "@/layout/news/NewsGrid";
-import '@/styles/components/sections/_contact.scss';
 import { getStrapiUrl } from "@/utils/strapi";
-
+import '@/styles/pages/news.scss';
 export default function News() {
   return (
     <div className="news__page bg-dark-1">

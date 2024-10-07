@@ -43,7 +43,7 @@
     },
     "interactions": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "interaction.interaction"
     }
   }
