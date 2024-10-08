@@ -880,6 +880,7 @@ export interface ApiPodcastPodcast extends Schema.CollectionType {
     title: Attribute.String & Attribute.Required;
     video: Attribute.Media<'videos'>;
     body: Attribute.Text & Attribute.Required;
+    thumbnail: Attribute.Media<'images'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

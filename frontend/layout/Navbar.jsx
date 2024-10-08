@@ -74,10 +74,10 @@ export default  function Navbar() {
                 </ul>
                 <div className='d-flex  gap-2'>
                   {
-                    isAuthenticated? (
+                    user? (
                       <>
                         <div>
-                          Hello {user.username}
+                          Hello {user?.username}
                         </div>
                         <button  className={currPath == '/login' ? "navbar__item --active --btn-primary" : 'navbar__item --btn-primary'} onClick={logOut}>
                           logout

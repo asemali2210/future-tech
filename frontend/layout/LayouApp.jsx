@@ -10,7 +10,7 @@ import UserAuth from './UserAuth';
 
 
 const LayoutApp = ({ children }) => {
-
+  
   return (
     <Provider store={store} >
       <UserAuth>

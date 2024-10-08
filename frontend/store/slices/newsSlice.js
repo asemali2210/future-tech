@@ -4,9 +4,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const fetchNews = createAsyncThunk('news/fetchNews', async () => {
     
-    
     try {
-        
         const res = await fetch(getStrapiUrl('/api/news?populate=*'))
         const date=  await res.json();
         return date

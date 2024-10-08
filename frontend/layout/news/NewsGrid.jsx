@@ -60,7 +60,7 @@ export default function NewsGrid() {
                   <div className='container'>
                     <div className='row row-gap-5'>
                       {
-                        news.news.data.slice(0,3).map(newsD => (
+                        news.news.data.slice(1,4).map(newsD => (
                           <div className='col-md-4' key={newsD.id}>
                           <div className='news__box'>
                             <Image src={getStrapiUrl(newsD.attributes.image.data.attributes.url)} className="img-fluid" width={400} height={400} alt={newsD.attributes.title} />

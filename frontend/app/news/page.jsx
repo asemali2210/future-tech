@@ -3,6 +3,7 @@ import Blogs from "@/components/FilterdBlogs";
 import NewsGrid from "@/layout/news/NewsGrid";
 import { getStrapiUrl } from "@/utils/strapi";
 import '@/styles/pages/news.scss';
+import FeaturedVideos from "@/layout/news/FeaturedVideos";
 export default function News() {
   return (
     <div className="news__page bg-dark-1">
@@ -27,6 +28,7 @@ export default function News() {
         content="View All News"
         href='/news'
       />
+      <FeaturedVideos />
       <Contact />
     </div>
   )
