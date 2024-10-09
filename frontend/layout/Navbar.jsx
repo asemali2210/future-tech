@@ -1,6 +1,6 @@
 'use client';
 import logo  from '@/public/assests/logo.svg';
-import { authLogout } from '@/store/slices/authSlice';
+import { authLogout, checkAuth } from '@/store/slices/authSlice';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';

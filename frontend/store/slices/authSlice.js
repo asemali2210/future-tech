@@ -1,6 +1,30 @@
-
 import { getStrapiUrl } from "@/utils/strapi";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
+export const userLogin = createAsyncThunk('user/login', 
+    async (values)=> {
+        try {
+            if (typeof window !== 'undefined') {
+                const res = await fetch(getStrapiUrl('/api/auth/local'), {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(values),
+                });
+                const { jwt,user } = await res.json();
+                localStorage.setItem('token', jwt);
+                return {jwt,user}
+            }
+            return null;  // Return null if no token is found or it's running on server-side
+
+           
+        
+        } catch (err) {
+            console.log(err.message)
+        }
+})
+
 
 
 export const checkAuth = createAsyncThunk('user/isAuthenticated', 
@@ -20,7 +44,7 @@ export const checkAuth = createAsyncThunk('user/isAuthenticated',
                     }
 
                     const userData = await res.json();
-                    return userData;
+                    return {userData, token};
                 }
             }
             return null;  // Return null if no token is found or it's running on server-side
@@ -54,16 +78,42 @@ const  authSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(checkAuth.fulfilled, (state, action) => {
-            state.user = action.payload
+            state.user = action.payload.userData
+            state.token = action.payload.token
             state.isAuthenticated = true;
             state.status = 'fulfilled';
 
         }),
-        builder.addCase(checkAuth.pending, (state, action) => {
+        builder.addCase(checkAuth.pending, (state) => {
             state.status = 'pending';
+            state.isAuthenticated = false;
+
         }),
-        builder.addCase(checkAuth.rejected, (state, action)=> {
+        builder.addCase(checkAuth.rejected, (state)=> {
+            state.status = 'rejected';
+            state.isAuthenticated = false;
+
+
+        }),
+        builder.addCase(userLogin.fulfilled, (state, action) => {
+            state.token = action.payload.jwt
+            state.user = action.payload.user
+            state.isAuthenticated = true;
+            state.status = 'fulfilled';
+
+        }),
+        builder.addCase(userLogin.pending, (state) => {
+            state.status = 'pending';
+            state.isAuthenticated = false;
+
+        }),
+        builder.addCase(userLogin.rejected, (state)=> {
+            state.status = 'rejected';
+            state.isAuthenticated = false;
+
+
         })
+
     }
 });
 
